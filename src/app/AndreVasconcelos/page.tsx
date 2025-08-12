@@ -70,7 +70,7 @@ export default function AndreVasconcelosPage() {
               <div>
                 <h3 className="text-3xl font-bold text-gray-800 mb-4">Casarão - Um Novo Espaço para a Arte</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Recentemente, um novo espaço cultural foi inaugurado no Bairro do Recife, o "Casarão - Bonecos Gigantes de Olinda em Recife". O local conta com uma exposição permanente de obras de André Vasconcelos, celebrando figuras da cultura popular pernambucana e grandes nomes da música brasileira, consolidando ainda mais seu legado.
+                  Recentemente, um novo espaço cultural foi inaugurado no Bairro do Recife, o Casarão - Bonecos Gigantes de Olinda em Recife. O local conta com uma exposição permanente de obras de André Vasconcelos, celebrando figuras da cultura popular pernambucana e grandes nomes da música brasileira, consolidando ainda mais seu legado.
                 </p>
               </div>
             </div>
