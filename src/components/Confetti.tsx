@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
-const Confetti = ({ x, y }) => {
-  const [style, setStyle] = useState({});
+const Confetti = ({ x, y }: { x: number; y: number }) => {
+  const [style, setStyle] = useState<React.CSSProperties>({});
 
   useEffect(() => {
     const colors = ['#ff0000', '#ff7f00', '#ffff00', '#00ff00', '#0000ff', '#4b0082', '#9400d3'];
