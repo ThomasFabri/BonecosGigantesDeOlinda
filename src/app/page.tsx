@@ -51,9 +51,12 @@ export default function HomePage() {
               <div className="w-10 h-10 bg-primary-red rounded-full flex items-center justify-center">
                 <Users className="w-6 h-6 text-black" />
               </div>
-              <span className="text-xl font-bold text-red-700">Casa dos Bonecos</span>
+              <span className="text-xl font-bold text-red-700">Casa dos Bonecos Gigantes de Olinda</span>
             </div>
             <nav className="hidden md:flex space-x-6">
+              <Link href="/AndreVasconcelos" className="text-purple-700 hover:text-black transition-colors">
+                Andre Vasconcelos
+              </Link>
               <Link href="#sobre" className="text-blue-700 hover:text-black transition-colors">
                 Sobre
               </Link>
@@ -73,7 +76,7 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="container mx-auto px-4">
+        <div className=" container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h1 className="text-4xl lg:text-6xl font-bold text-yellow-500 leading-tight">
