@@ -20,7 +20,7 @@ export default function AndreVasconcelosPage() {
       </header>
 
       {/* Main Content */}
-      <main className="container mx-auto px-4 py-12">
+      <main className="container mx-auto px-4 py-6 md:py-12">
         <div className="max-w-4xl mx-auto">
           {/* Introduction */}
           <section className="mb-12">
@@ -37,7 +37,7 @@ export default function AndreVasconcelosPage() {
                   alt="André Vasconcelos com um Boneco Gigante"
                   width={400}
                   height={500}
-                  className="rounded-lg shadow-xl mx-auto"
+                  className="w-full h-auto rounded-lg shadow-xl mx-auto"
                 />
               </div>
             </div>
@@ -64,7 +64,7 @@ export default function AndreVasconcelosPage() {
                   alt="Bonecos no Carnaval de Olinda"
                   width={500}
                   height={600}
-                  className="rounded-lg shadow-lg"
+                  className="w-full h-auto rounded-lg shadow-lg"
                 />
               </div>
               <div>
@@ -80,7 +80,7 @@ export default function AndreVasconcelosPage() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-gray-800 text-white py-8">
+      <footer className="bg-gray-800 text-white py-4 md:py-8">
         <div className="container mx-auto px-4 text-center">
           <p>© {new Date().getFullYear()} Casa dos Bonecos Gigantes de Olinda. Todos os direitos reservados.</p>
         </div>

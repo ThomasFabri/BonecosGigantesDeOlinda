@@ -51,7 +51,7 @@ export default function HomePage() {
               <div className="w-10 h-10 bg-primary-red rounded-full flex items-center justify-center">
                 <Users className="w-6 h-6 text-black" />
               </div>
-              <span className="text-xl font-bold text-red-700">Casa dos Bonecos Gigantes de Olinda</span>
+              <span className="text-lg  md:text-xl font-bold text-red-700">Casa dos Bonecos Gigantes de Olinda</span>
             </div>
             <nav className="hidden md:flex space-x-6">
               <Link href="/AndreVasconcelos" className="text-purple-700 hover:text-black transition-colors">
@@ -75,7 +75,7 @@ export default function HomePage() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
+      <section className="relative py-10 md:py-20 lg:py-32 overflow-hidden">
         <div className=" container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
@@ -90,9 +90,11 @@ export default function HomePage() {
                 bonecos de mais de 2 metros de altura.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
+                <Link href={"https://api.whatsapp.com/send/?phone=558198536019&text&type=phone_number&app_absent=0"}>
                 <Button size="lg" className="bg-red-800 hover:bg-red-700 text-white px-8 py-3">
                   Visitar
                 </Button>
+                </Link>
                 <Link href="#horarios">
                   <Button
                     variant="outline"
@@ -110,7 +112,7 @@ export default function HomePage() {
                 alt="Bonecos Gigantes de Olinda"
                 width={600}
                 height={800}
-                className="rounded-lg shadow-2xl"
+                className="w-full h-auto rounded-lg shadow-2xl"
               />
             </div>
           </div>
@@ -118,7 +120,7 @@ export default function HomePage() {
       </section>
 
       {/* Sobre a Casa */}
-      <section id="sobre" className="py-16 bg-white">
+      <section id="sobre" className="py-8 md:py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
@@ -142,7 +144,7 @@ export default function HomePage() {
                 alt="Interior da Casa dos Bonecos"
                 width={500}
                 height={600}
-                className="rounded-lg shadow-lg"
+                className="w-full h-auto rounded-lg shadow-lg"
               />
             </div>
           </div>
@@ -150,7 +152,7 @@ export default function HomePage() {
       </section>
 
       {/* Nossa História */}
-      <section id="historia" className="py-16 bg-white">
+      <section id="historia" className="py-8 md:py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl lg:text-4xl font-bold text-center text-gray-800 mb-12">Nossa História</h2>
@@ -174,7 +176,7 @@ export default function HomePage() {
                   alt="Bonecos históricos"
                   width={500}
                   height={600}
-                  className="rounded-lg shadow-lg"
+                  className="w-full h-auto rounded-lg shadow-lg"
                 />
                 <p className="text-gray-700 leading-relaxed">
                   Ao visitar a Casa, você não apenas vê os bonecos — você caminha entre eles, escuta suas histórias e
@@ -187,7 +189,7 @@ export default function HomePage() {
       </section>
 
       {/* O que você encontrará aqui */}
-      <section id="atrações" className="py-16 bg-white">
+      <section id="atrações" className="py-8 md:py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl lg:text-4xl font-bold text-center text-gray-800 mb-12">O que você encontrará aqui</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -242,7 +244,7 @@ export default function HomePage() {
       </section>
 
       {/* Horários de Funcionamento */}
-      <section id="horarios" className="py-16 bg-white">
+      <section id="horarios" className="py-8 md:py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl lg:text-4xl font-bold text-center text-gray-800 mb-12">
@@ -279,7 +281,7 @@ export default function HomePage() {
                 alt="Fachada da Casa dos Bonecos"
                 width={500}
                 height={600}
-                className="rounded-lg shadow-lg mx-auto"
+                className="w-full h-auto rounded-lg shadow-lg mx-auto"
               />
             </div>
           </div>
@@ -287,17 +289,17 @@ export default function HomePage() {
       </section>
 
       {/* Planeje sua Visita */}
-      <section className="py-16 bg-white">
+      <section className="py-8 md:py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-6">Planeje sua Visita</h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-8">
+            <h2 className="text-3xl lg:text-4xl font-bold text-yellow-500 mb-6">Planeje sua Visita</h2>
+            <p className="text-lg text-yellow-500 leading-relaxed mb-8">
               Visitar a Casa dos Bonecos Gigantes é uma forma leve, divertida e emocionante de conhecer mais da alma
               nordestina. Seja você turista, morador ou estudante, temos certeza de que vai se encantar.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="https://maps.app.goo.gl/fQj7K2Ua9ZKB8bEcA" target="_blank" rel="noopener noreferrer">
-                <Button size="lg" className="bg-primary-red hover:bg-red-700 text-white px-8 py-3">
+                <Button size="lg" className="bg-yellow-500 hover:bg-red-700 text-black px-8 py-3">
                   Vamos Visitar!
                 </Button>
               </Link>
@@ -307,7 +309,7 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-800 text-white py-12">
+      <footer className="bg-gray-800 text-white py-6 md:py-12">
         <div className="container mx-auto px-4">
           <div className="text-center space-y-4">
             <h3 className="text-2xl font-bold">Casa dos Bonecos Gigantes de Olinda</h3>
