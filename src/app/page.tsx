@@ -39,34 +39,37 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-soft-red">
+    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-red-50 to-yellow-50">
       {confetti.map((c) => (
         <Confetti key={c.id} x={c.x} y={c.y} />
       ))}
-      {/* Header */}
-      <header className="bg-white shadow-sm">
+      
+      {/* Header Melhorado */}
+      <header className="bg-white/90 backdrop-blur-md shadow-lg border-b border-red-100 sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-primary-red rounded-full flex items-center justify-center">
-                <Users className="w-6 h-6 text-black" />
+            <div className="flex items-center space-x-3">
+              <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-orange-500 rounded-xl flex items-center justify-center shadow-lg transform hover:scale-105 transition-transform">
+                <Users className="w-7 h-7 text-white" />
               </div>
-              <span className="text-lg  md:text-xl font-bold text-red-700">Casa dos Bonecos Gigantes de Olinda</span>
+              <span className="text-lg md:text-xl font-bold bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">
+                Casa dos Bonecos Gigantes de Olinda
+              </span>
             </div>
             <nav className="hidden md:flex space-x-6">
-              <Link href="/AndreVasconcelos" className="text-purple-700 hover:text-black transition-colors">
+              <Link href="/AndreVasconcelos" className="text-purple-600 hover:text-purple-800 transition-all hover:scale-105 font-medium">
                 Andre Vasconcelos
               </Link>
-              <Link href="#sobre" className="text-blue-700 hover:text-black transition-colors">
+              <Link href="#sobre" className="text-blue-600 hover:text-blue-800 transition-all hover:scale-105 font-medium">
                 Sobre
               </Link>
-              <Link href="#historia" className="text-green-700 hover:text-black transition-colors">
+              <Link href="#historia" className="text-green-600 hover:text-green-800 transition-all hover:scale-105 font-medium">
                 História
               </Link>
-              <Link href="#atrações" className="text-yellow-500 hover:text-black transition-colors">
+              <Link href="#atrações" className="text-yellow-600 hover:text-yellow-800 transition-all hover:scale-105 font-medium">
                 Atrações
               </Link>
-              <Link href="#horarios" className="text-red-700 hover:text-black transition-colors">
+              <Link href="#horarios" className="text-red-600 hover:text-red-800 transition-all hover:scale-105 font-medium">
                 Horários
               </Link>
             </nav>
@@ -74,64 +77,68 @@ export default function HomePage() {
         </div>
       </header>
 
-      {/* Hero Section */}
+      {/* Hero Section Melhorado */}
       <section className="relative py-10 md:py-20 lg:py-32 overflow-hidden">
-        <div className=" container mx-auto px-4">
+        <div className="absolute inset-0 bg-gradient-to-br from-red-100/50 via-orange-100/30 to-yellow-100/50"></div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <h1 className="text-4xl lg:text-6xl font-bold text-yellow-500 leading-tight">
+            <div className="space-y-8 animate-fade-in-up">
+              <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-red-600 via-orange-500 to-yellow-500 bg-clip-text text-transparent leading-tight">
                 Casa dos Bonecos Gigantes de Olinda
               </h1>
-              <p className="text-xl lg:text-2xl text-yellow-400 font-medium">
+              <p className="text-xl lg:text-2xl text-orange-700 font-semibold">
                 A cultura popular pernambucana
               </p>
-              <p className="text-lg text-yellow-300 leading-relaxed">
+              <p className="text-lg text-gray-700 leading-relaxed">
                 Uma experiência única no coração de Olinda, onde tradição, arte e identidade nordestina ganham vida em
                 bonecos de mais de 2 metros de altura.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href={"https://api.whatsapp.com/send/?phone=558198536019&text&type=phone_number&app_absent=0"}>
-                <Button size="lg" className="bg-red-800 hover:bg-red-700 text-white px-8 py-3">
-                  Visitar
-                </Button>
+                  <Button size="lg" className="bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white px-8 py-3 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200">
+                    Visitar Agora
+                  </Button>
                 </Link>
                 <Link href="#horarios">
                   <Button
                     variant="outline"
                     size="lg"
-                    className="border-primary-red text-white hover:bg-soft-red px-8 py-3 bg-transparent"
+                    className="border-2 border-red-500 text-red-600 hover:bg-red-50 px-8 py-3 shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-200"
                   >
                     Ver Horários
                   </Button>
                 </Link>
               </div>
             </div>
-            <div className="relative">
+            <div className="relative animate-fade-in-right">
+              <div className="absolute -inset-4 bg-gradient-to-r from-red-400 to-orange-400 rounded-2xl blur opacity-20"></div>
               <Image
                 src="/hero.jpg"
                 alt="Bonecos Gigantes de Olinda"
                 width={600}
                 height={800}
-                className="w-full h-auto rounded-lg shadow-2xl"
+                className="relative w-full h-auto rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-300"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Sobre a Casa */}
-      <section id="sobre" className="py-8 md:py-16 bg-white">
+      {/* Sobre a Casa Melhorado */}
+      <section id="sobre" className="py-16 md:py-20">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-800">Sobre a Casa</h2>
-              <div className="space-y-4 text-gray-700 leading-relaxed">
-                <p>
+              <h2 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">
+                Sobre a Casa
+              </h2>
+              <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
+                <p className="p-4 bg-white/70 backdrop-blur-sm rounded-xl shadow-md border border-red-100">
                   A Casa dos Bonecos Gigantes é um dos espaços culturais mais marcantes de Olinda. Localizada no bairro
                   do Carmo, ela abriga dezenas de bonecos em tamanho gigante que representam personalidades históricas,
                   artistas populares e figuras icônicas da cultura nordestina.
                 </p>
-                <p>
+                <p className="p-4 bg-white/70 backdrop-blur-sm rounded-xl shadow-md border border-orange-100">
                   Mais do que um ponto turístico, o espaço é um mergulho vivo na identidade e na alegria do povo
                   pernambucano. Aqui, você encontra apresentações ao vivo, dançarinos de frevo, exposições permanentes e
                   uma imersão encantadora no universo dos festejos populares.
@@ -139,168 +146,192 @@ export default function HomePage() {
               </div>
             </div>
             <div className="relative">
+              <div className="absolute -inset-4 bg-gradient-to-r from-orange-400 to-red-400 rounded-2xl blur opacity-20"></div>
               <Image
                 src="/Casa.jpeg"
                 alt="Interior da Casa dos Bonecos"
                 width={500}
                 height={600}
-                className="w-full h-auto rounded-lg shadow-lg"
+                className="relative w-full h-auto rounded-2xl shadow-xl hover:scale-105 transition-transform duration-300"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Nossa História */}
-      <section id="historia" className="py-8 md:py-16 bg-white">
+      {/* Nossa História Melhorado */}
+      <section id="historia" className="py-16 md:py-20 bg-gradient-to-r from-white/80 to-red-50/80 backdrop-blur-sm">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl lg:text-4xl font-bold text-center text-gray-800 mb-12">Nossa História</h2>
-            <div className="grid md:grid-cols-2 gap-8 items-start">
-              <div className="space-y-4 text-gray-700 leading-relaxed">
-                <p>
-                  A tradição dos bonecos gigantes em Olinda começou a ganhar força nas festas populares como o Carnaval,
-                  trazendo personagens em proporções exuberantes para as ladeiras da cidade. Inspirada por expressões
-                  culturais europeias e adaptada ao ritmo brasileiro, a arte dos bonecos se tornou um símbolo local.
-                </p>
-                <p>
-                  A Casa dos Bonecos Gigantes surgiu como um espaço para preservar, celebrar e divulgar essa tradição.
-                  Fundada por artistas e entusiastas da cultura pernambucana, a Casa abriga hoje um acervo que mistura
-                  humor, crítica social e homenagem a grandes nomes da história nordestina — como Luiz Gonzaga, Lampião,
-                  Ariano Suassuna e muitos outros.
-                </p>
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-4xl lg:text-5xl font-bold text-center bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent mb-16">
+              Nossa História
+            </h2>
+            <div className="grid md:grid-cols-2 gap-12 items-start">
+              <div className="space-y-6">
+                <div className="p-6 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg border border-red-100 hover:shadow-xl transition-shadow">
+                  <p className="text-gray-700 leading-relaxed text-lg">
+                    A tradição dos bonecos gigantes em Olinda começou a ganhar força nas festas populares como o Carnaval,
+                    trazendo personagens em proporções exuberantes para as ladeiras da cidade. Inspirada por expressões
+                    culturais europeias e adaptada ao ritmo brasileiro, a arte dos bonecos se tornou um símbolo local.
+                  </p>
+                </div>
+                <div className="p-6 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg border border-orange-100 hover:shadow-xl transition-shadow">
+                  <p className="text-gray-700 leading-relaxed text-lg">
+                    A Casa dos Bonecos Gigantes surgiu como um espaço para preservar, celebrar e divulgar essa tradição.
+                    Fundada por artista e entusiasta da cultura pernambucana, a Casa abriga hoje um acervo que mistura
+                    humor, crítica social e homenagem a grandes nomes da história nordestina — como Luiz Gonzaga, Lampião,
+                    Ariano Suassuna e muitos outros.
+                  </p>
+                </div>
               </div>
-              <div className="space-y-4">
-                <Image
-                  src="/Carnaval.png"
-                  alt="Bonecos históricos"
-                  width={500}
-                  height={600}
-                  className="w-full h-auto rounded-lg shadow-lg"
-                />
-                <p className="text-gray-700 leading-relaxed">
-                  Ao visitar a Casa, você não apenas vê os bonecos — você caminha entre eles, escuta suas histórias e
-                  sente a vibração cultural que pulsa em cada detalhe.
-                </p>
+              <div className="space-y-6">
+                <div className="relative">
+                  <div className="absolute -inset-4 bg-gradient-to-r from-red-400 to-yellow-400 rounded-2xl blur opacity-20"></div>
+                  <Image
+                    src="/Carnaval.png"
+                    alt="Bonecos históricos"
+                    width={500}
+                    height={600}
+                    className="relative w-full h-auto rounded-2xl shadow-xl hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg border border-yellow-100">
+                  <p className="text-gray-700 leading-relaxed text-lg">
+                    Ao visitar a Casa, você não apenas vê os bonecos — você caminha entre eles, escuta suas histórias e
+                    sente a vibração cultural que pulsa em cada detalhe.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* O que você encontrará aqui */}
-      <section id="atrações" className="py-8 md:py-16 bg-white">
+      {/* Atrações Melhorado */}
+      <section id="atrações" className="py-16 md:py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl lg:text-4xl font-bold text-center text-gray-800 mb-12">O que você encontrará aqui</h2>
+          <h2 className="text-4xl lg:text-5xl font-bold text-center bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent mb-16">
+            O que você encontrará aqui
+          </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="p-6 text-center hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-soft-red rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-red-700" />
+            <Card className="p-8 text-center bg-white/80 backdrop-blur-sm border border-red-100 hover:shadow-2xl hover:scale-105 transition-all duration-300 group">
+              <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                <Users className="w-10 h-10 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">Bonecos GIGANTES</h3>
-              <p className="text-gray-600">Figuras populares, históricas e culturais em escala gigante.</p>
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">Bonecos GIGANTES</h3>
+              <p className="text-gray-600 text-lg">Figuras populares, históricas e culturais em escala gigante.</p>
             </Card>
 
-            <Card className="p-6 text-center hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-soft-red rounded-full flex items-center justify-center mx-auto mb-4">
-                <Music className="w-8 h-8 text-red-700" />
+            <Card className="p-8 text-center bg-white/80 backdrop-blur-sm border border-orange-100 hover:shadow-2xl hover:scale-105 transition-all duration-300 group">
+              <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-yellow-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                <Music className="w-10 h-10 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">Apresentações culturais</h3>
-              <p className="text-gray-600">Dançarinos de frevo e música ao vivo em horários selecionados.</p>
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">Apresentações culturais</h3>
+              <p className="text-gray-600 text-lg">Dançarinos de frevo e música ao vivo em horários selecionados.</p>
             </Card>
 
-            <Card className="p-6 text-center hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-soft-red rounded-full flex items-center justify-center mx-auto mb-4">
-                <ImageIcon className="w-8 h-8 text-red-700" />
+            <Card className="p-8 text-center bg-white/80 backdrop-blur-sm border border-yellow-100 hover:shadow-2xl hover:scale-105 transition-all duration-300 group">
+              <div className="w-20 h-20 bg-gradient-to-br from-yellow-500 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                <ImageIcon className="w-10 h-10 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">Exposição permanente</h3>
-              <p className="text-gray-600">Um passeio visual e interativo pela cultura nordestina.</p>
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">Exposição permanente</h3>
+              <p className="text-gray-600 text-lg">Um passeio visual e interativo pela cultura nordestina.</p>
             </Card>
 
-            <Card className="p-6 text-center hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-soft-red rounded-full flex items-center justify-center mx-auto mb-4">
-                <Camera className="w-8 h-8 text-red-700" />
+            <Card className="p-8 text-center bg-white/80 backdrop-blur-sm border border-green-100 hover:shadow-2xl hover:scale-105 transition-all duration-300 group">
+              <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                <Camera className="w-10 h-10 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">Espaço instagramável</h3>
-              <p className="text-gray-600">Traga sua câmera — aqui cada canto é uma foto inesquecível.</p>
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">Espaço instagramável</h3>
+              <p className="text-gray-600 text-lg">Traga sua câmera — aqui cada canto é uma foto inesquecível.</p>
             </Card>
 
-            <Card className="p-6 text-center hover:shadow-lg transition-shadow md:col-span-2 lg:col-span-1">
-              <div className="w-16 h-16 bg-soft-red rounded-full flex items-center justify-center mx-auto mb-4">
-                <Clock className="w-8 h-8 text-red-700" />
+            <Card className="p-8 text-center bg-white/80 backdrop-blur-sm border border-blue-100 hover:shadow-2xl hover:scale-105 transition-all duration-300 group">
+              <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                <Clock className="w-10 h-10 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">Acesso fácil e visitação diária</h3>
-              <p className="text-gray-600">Aberto todos os dias da semana, com entrada simples e rápida com um valor acessível.</p>
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">Acesso fácil e visitação diária</h3>
+              <p className="text-gray-600 text-lg">Aberto todos os dias da semana, com entrada simples e rápida com um valor acessível.</p>
             </Card>
-            <Card className="p-6 text-center hover:shadow-lg transition-shadow md:col-span-2 lg:col-span-1">
-              <div className="w-16 h-16 bg-soft-red rounded-full flex items-center justify-center mx-auto mb-4">
-                <Bus className="w-8 h-8 text-red-700" />
+
+            <Card className="p-8 text-center bg-white/80 backdrop-blur-sm border border-purple-100 hover:shadow-2xl hover:scale-105 transition-all duration-300 group">
+              <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                <Bus className="w-10 h-10 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">Entrada gratuita</h3>
-              <p className="text-gray-600">Para alunos e professores de escolas públicas com agendamento e ofício prévios.</p>
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">Entrada gratuita</h3>
+              <p className="text-gray-600 text-lg">Para alunos e professores de escolas públicas com agendamento e ofício prévios.</p>
             </Card>
           </div>
         </div>
       </section>
 
-      {/* Horários de Funcionamento */}
-      <section id="horarios" className="py-8 md:py-16 bg-white">
+      {/* Horários Melhorado */}
+      <section id="horarios" className="py-16 md:py-20 bg-gradient-to-r from-white/80 to-orange-50/80">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl lg:text-4xl font-bold text-center text-gray-800 mb-12">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-4xl lg:text-5xl font-bold text-center bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent mb-16">
               Horários de Funcionamento
             </h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <Card className="p-8">
-                <div className="flex items-center mb-4">
-                  <MapPin className="w-6 h-6 text-red-700 mr-2" />
-                  <h3 className="text-xl font-semibold text-gray-800">Endereço</h3>
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <Card className="p-10 bg-white/90 backdrop-blur-sm shadow-2xl border border-red-100 hover:shadow-3xl transition-shadow rounded-2xl">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-orange-500 rounded-xl flex items-center justify-center mr-4">
+                    <MapPin className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-800">Endereço</h3>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-gray-700 text-xl leading-relaxed">
                   R. Bispo Coutinho, 780 – Carmo
                   <br />
                   Olinda – PE
                 </p>
               </Card>
 
-              <Card className="p-8">
-                <div className="flex items-center mb-4">
-                  <Clock className="w-6 h-6 text-red-700 mr-2" />
-                  <h3 className="text-xl font-semibold text-gray-800">Funcionamento</h3>
+              <Card className="p-10 bg-white/90 backdrop-blur-sm shadow-2xl border border-orange-100 hover:shadow-3xl transition-shadow rounded-2xl">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-yellow-500 rounded-xl flex items-center justify-center mr-4">
+                    <Clock className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-800">Funcionamento</h3>
                 </div>
-                <p className="text-gray-700 text-lg">
+                <p className="text-gray-700 text-xl leading-relaxed">
                   Todos os dias - das 09h00 às 17h30
                   <br />
                   Em férias escolares - das 09h00 às 19h00
                 </p>
               </Card>
             </div>
-            <div className="mt-8 text-center">
-              <Image
-                src="/fachada.png"
-                alt="Fachada da Casa dos Bonecos"
-                width={500}
-                height={600}
-                className="w-full h-auto rounded-lg shadow-lg mx-auto"
-              />
+            <div className="text-center">
+              <div className="relative inline-block">
+                <div className="absolute -inset-4 bg-gradient-to-r from-red-400 to-orange-400 rounded-2xl blur opacity-20"></div>
+                <Image
+                  src="/fachada.png"
+                  alt="Fachada da Casa dos Bonecos"
+                  width={600}
+                  height={400}
+                  className="relative rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-300"
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Planeje sua Visita */}
-      <section className="py-8 md:py-16">
+      {/* Call to Action Melhorado */}
+      <section className="py-16 md:py-20 bg-gradient-to-br from-red-500 via-orange-500 to-yellow-500">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold text-yellow-500 mb-6">Planeje sua Visita</h2>
-            <p className="text-lg text-yellow-500 leading-relaxed mb-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-8 drop-shadow-lg">
+              Planeje sua Visita
+            </h2>
+            <p className="text-xl lg:text-2xl text-white/90 leading-relaxed mb-10 drop-shadow">
               Visitar a Casa dos Bonecos Gigantes é uma forma leve, divertida e emocionante de conhecer mais da alma
               nordestina. Seja você turista, morador ou estudante, temos certeza de que vai se encantar.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://maps.app.goo.gl/fQj7K2Ua9ZKB8bEcA" target="_blank" rel="noopener noreferrer">
-                <Button size="lg" className="bg-yellow-500 hover:bg-red-700 text-black px-8 py-3">
-                  Vamos Visitar!
+            <div className="flex justify-center">
+              <Link href="https://api.whatsapp.com/send/?phone=558198536019&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="bg-white text-orange-600 hover:bg-gray-50 px-12 py-4 text-xl font-bold shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-200 rounded-xl">
+                  🎭 Vamos Visitar! 🎪
                 </Button>
               </Link>
             </div>
@@ -308,32 +339,66 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-800 text-white py-6 md:py-12">
+      {/* Footer Melhorado */}
+      <footer className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-12 md:py-16">
         <div className="container mx-auto px-4">
-          <div className="text-center space-y-4">
-            <h3 className="text-2xl font-bold">Casa dos Bonecos Gigantes de Olinda</h3>
-            <p className="text-gray-300 max-w-2xl mx-auto">
+          <div className="text-center space-y-6">
+            <h3 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
+              Casa dos Bonecos Gigantes de Olinda
+            </h3>
+            <p className="text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed">
               Preservando a cultura nordestina através da arte e da tradição.
             </p>
-            <div className="flex justify-center space-x-4 pt-4">
+            <div className="flex justify-center pt-6">
               <Link
-                href="https://instagram.com/bonecosgigantesolinda"
-                className="text-gray-300 hover:text-white transition-colors"
+                href="https://instagram.com/bonecosgigantesemirinsdeolinda"
+                className="text-gray-300 hover:text-orange-400 transition-colors text-lg hover:scale-105 transform duration-200"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Siga-nos no Instagram: @bonecosgigantesolinda
+                📱 Siga-nos no Instagram: @bonecosgigantesemirinsdeolinda
               </Link>
             </div>
             <div className="border-t border-gray-700 pt-8 mt-8">
-              <p className="text-gray-400 text-sm">
+              <p className="text-gray-400">
                 © {new Date().getFullYear()} Casa dos Bonecos Gigantes de Olinda. Todos os direitos reservados.
               </p>
             </div>
           </div>
         </div>
       </footer>
+      
+      <style jsx>{`
+        @keyframes fade-in-up {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        
+        @keyframes fade-in-right {
+          from {
+            opacity: 0;
+            transform: translateX(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+        
+        .animate-fade-in-up {
+          animation: fade-in-up 0.8s ease-out;
+        }
+        
+        .animate-fade-in-right {
+          animation: fade-in-right 0.8s ease-out 0.2s both;
+        }
+      `}</style>
     </div>
   )
 }
