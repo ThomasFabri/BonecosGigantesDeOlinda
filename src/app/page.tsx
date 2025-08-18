@@ -103,7 +103,7 @@ export default function HomePage() {
                   <Button
                     variant="outline"
                     size="lg"
-                    className="border-2 border-red-500 text-red-600 hover:bg-red-50 px-8 py-3 shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-200"
+                    className="border-2 border-red-500 text-red-600 bg-gradient-to-r from-red-600 to-orange-600 hover:bg-red-50 px-8 py-3 shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-200"
                   >
                     Ver Horários
                   </Button>
