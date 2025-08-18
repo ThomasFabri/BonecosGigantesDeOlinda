@@ -48,7 +48,7 @@ export default function AndreVasconcelosPage() {
             <h3 className="text-3xl font-bold text-gray-800 mb-6 text-center">Um Legado de Dedicação</h3>
             <div className="bg-white p-8 rounded-lg shadow-md">
               <p className="text-gray-700 leading-relaxed mb-4">
-                Discípulo do icônico mestre Silvio Botelho, "pai" dos Bonecos Gigantes, André começou sua jornada na confecção dos bonecos aos seis anos de idade. Hoje, ele dedica seus dias a criar novos personagens, utilizando materiais diversos como tecido, isopor, papel, madeira e fibra de vidro para dar vida a figuras que encantam o Brasil e o mundo.
+                Discípulo do icônico mestre Silvio Botelho, &quot;pai&quot; dos Bonecos Gigantes, André começou sua jornada na confecção dos bonecos aos seis anos de idade. Hoje, ele dedica seus dias a criar novos personagens, utilizando materiais diversos como tecido, isopor, papel, madeira e fibra de vidro para dar vida a figuras que encantam o Brasil e o mundo.
               </p>
               <p className="text-gray-700 leading-relaxed">
                 Além de seu trabalho como artesão, André Vasconcelos atua na curadoria e na disseminação da história e cultura por trás da tradição dos Bonecos Gigantes. Ele é uma peça-chave em projetos culturais que levam a arte de Olinda para novos públicos.
