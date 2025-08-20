@@ -57,9 +57,6 @@ export default function HomePage() {
               </span>
             </div>
             <nav className="hidden md:flex space-x-6">
-              <Link href="/AndreVasconcelos" className="text-purple-600 hover:text-purple-800 transition-all hover:scale-105 font-medium">
-                Andre Vasconcelos
-              </Link>
               <Link href="#sobre" className="text-blue-600 hover:text-blue-800 transition-all hover:scale-105 font-medium">
                 Sobre
               </Link>
