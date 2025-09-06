@@ -53,7 +53,7 @@ export default function HomePage() {
                 <Users className="w-7 h-7 text-white" />
               </div>
               <span className="text-lg md:text-xl font-bold bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">
-                Casa dos Bonecos Gigantes de Olinda
+                Casa dos Bonecos Gigantes e Mirins de Olinda
               </span>
             </div>
             <nav className="hidden md:flex space-x-6">
@@ -81,7 +81,7 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8 animate-fade-in-up">
               <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-red-600 via-orange-500 to-yellow-500 bg-clip-text text-transparent leading-tight">
-                Casa dos Bonecos Gigantes de Olinda
+                Casa dos Bonecos Gigantes e Mirins de Olinda
               </h1>
               <p className="text-xl lg:text-2xl text-orange-700 font-semibold">
                 A cultura popular pernambucana
@@ -176,8 +176,7 @@ export default function HomePage() {
                   <p className="text-gray-700 leading-relaxed text-lg">
                     A Casa dos Bonecos Gigantes surgiu como um espaço para preservar, celebrar e divulgar essa tradição.
                     Fundada por artista e entusiasta da cultura pernambucana, a Casa abriga hoje um acervo que mistura
-                    humor, crítica social e homenagem a grandes nomes da história nordestina — como Luiz Gonzaga, Lampião,
-                    Ariano Suassuna e muitos outros.
+                    humor, crítica social e homenagem a grandes nomes da história nordestina — como Luiz Gonzaga e muitos outros.
                   </p>
                 </div>
               </div>
@@ -224,7 +223,7 @@ export default function HomePage() {
                 <Music className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-gray-800 mb-4">Apresentações culturais</h3>
-              <p className="text-gray-600 text-lg">Dançarinos de frevo e música ao vivo em horários selecionados.</p>
+              <p className="text-gray-600 text-lg">Apresentações de passistas do frevo sexta, sábado e domingo.</p>
             </Card>
 
             <Card className="p-8 text-center bg-white/80 backdrop-blur-sm border border-yellow-100 hover:shadow-2xl hover:scale-105 transition-all duration-300 group">
@@ -341,7 +340,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="text-center space-y-6">
             <h3 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
-              Casa dos Bonecos Gigantes de Olinda
+              Casa dos Bonecos Gigantes e Mirins de Olinda
             </h3>
             <p className="text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed">
               Preservando a cultura nordestina através da arte e da tradição.
@@ -358,7 +357,7 @@ export default function HomePage() {
             </div>
             <div className="border-t border-gray-700 pt-8 mt-8">
               <p className="text-gray-400">
-                © {new Date().getFullYear()} Casa dos Bonecos Gigantes de Olinda. Todos os direitos reservados.
+                © {new Date().getFullYear()} Casa dos Bonecos Gigantes e Mirins de Olinda. Todos os direitos reservados.
               </p>
             </div>
           </div>
