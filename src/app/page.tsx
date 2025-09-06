@@ -6,7 +6,6 @@ import { Card } from "@/components/ui/card"
 import { Clock, MapPin, Camera, Users, Music, ImageIcon, Bus } from "lucide-react"
 import Link from "next/link"
 import Image from 'next/image';
-import Confetti from '@/components/Confetti';
 
 interface ConfettiParticle {
   id: number;
@@ -40,21 +39,21 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 via-red-50 to-yellow-50">
-      {confetti.map((c) => (
-        <Confetti key={c.id} x={c.x} y={c.y} />
-      ))}
-      
       {/* Header Melhorado */}
       <header className="bg-white/90 backdrop-blur-md shadow-lg border-b border-red-100 sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4">
+        <div className="container mx-auto px-10 py-2">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-orange-500 rounded-xl flex items-center justify-center shadow-lg transform hover:scale-105 transition-transform">
-                <Users className="w-7 h-7 text-white" />
+              <div className="relative w-[50px] h-[50px] overflow-hidden">
+                <Link href={'#home'}>
+                  <Image
+                    src="/logo.jpg"
+                    alt="Bonecos Gigantes de Olinda"
+                    fill
+                    className="object-cover"
+                  />
+                </Link>
               </div>
-              <span className="text-lg md:text-xl font-bold bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">
-                Casa dos Bonecos Gigantes e Mirins de Olinda
-              </span>
             </div>
             <nav className="hidden md:flex space-x-6">
               <Link href="#sobre" className="text-blue-600 hover:text-blue-800 transition-all hover:scale-105 font-medium">
@@ -75,12 +74,11 @@ export default function HomePage() {
       </header>
 
       {/* Hero Section Melhorado */}
-      <section className="relative py-10 md:py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-red-100/50 via-orange-100/30 to-yellow-100/50"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <section id="home" className="relative overflow-hidden">
+        <div className="mx-auto relative z-10">
+          <div className="grid lg:grid-cols-2 gap-24 items-center py-10 px-10">
             <div className="space-y-8 animate-fade-in-up">
-              <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-red-600 via-orange-500 to-yellow-500 bg-clip-text text-transparent leading-tight">
+              <h1 className="text-4xl lg:text-5xl font-serif font-bold text-red-800 leading-tight">
                 Casa dos Bonecos Gigantes e Mirins de Olinda
               </h1>
               <p className="text-xl lg:text-2xl text-orange-700 font-semibold">
@@ -92,7 +90,11 @@ export default function HomePage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href={"https://api.whatsapp.com/send/?phone=558198536019&text&type=phone_number&app_absent=0"}>
-                  <Button size="lg" className="bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white px-8 py-3 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200">
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="border-2 border-red-500 bg-gradient-to-r from-red-600 to-orange-600 hover:bg-red-50 px-8 py-3 shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-200"
+                  >
                     Visitar Agora
                   </Button>
                 </Link>
@@ -107,26 +109,24 @@ export default function HomePage() {
                 </Link>
               </div>
             </div>
-            <div className="relative animate-fade-in-right">
-              <div className="absolute -inset-4 bg-gradient-to-r from-red-400 to-orange-400 rounded-2xl blur opacity-20"></div>
+            <div className="relative w-[650px] h-[500px] overflow-hidden rounded-2xl shadow-xl animate-fade-in-right">
               <Image
                 src="/hero.jpg"
                 alt="Bonecos Gigantes de Olinda"
-                width={600}
-                height={800}
-                className="relative w-full h-auto rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-300"
+                fill
+                className="object-cover"
               />
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Sobre a Casa Melhorado */}
-      <section id="sobre" className="py-16 md:py-20">
+      < section id="sobre" className="py-16 px-10" >
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h2 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">
+              <h2 className="text-4xl lg:text-5xl font-bold text-red-800 font-serif">
                 Sobre a Casa
               </h2>
               <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
@@ -142,25 +142,24 @@ export default function HomePage() {
                 </p>
               </div>
             </div>
-            <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-orange-400 to-red-400 rounded-2xl blur opacity-20"></div>
+            <div className="relative px-10">
               <Image
                 src="/Casa.jpeg"
                 alt="Interior da Casa dos Bonecos"
-                width={500}
-                height={600}
-                className="relative w-full h-auto rounded-2xl shadow-xl hover:scale-105 transition-transform duration-300"
+                width={400}
+                height={500}
+                className="relative w-xl h-auto rounded-2xl shadow-xl"
               />
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Nossa História Melhorado */}
-      <section id="historia" className="py-16 md:py-20 bg-gradient-to-r from-white/80 to-red-50/80 backdrop-blur-sm">
+      < section id="historia" className="py-16 md:py-20 backdrop-blur-sm" >
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-4xl lg:text-5xl font-bold text-center bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-center text-red-800 font-serif mb-16">
               Nossa História
             </h2>
             <div className="grid md:grid-cols-2 gap-12 items-start">
@@ -201,12 +200,12 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Atrações Melhorado */}
-      <section id="atrações" className="py-16 md:py-20">
+      < section id="atrações" className="py-16 md:py-20" >
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl lg:text-5xl font-bold text-center bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent mb-16">
+          <h2 className="text-4xl lg:text-5xl font-bold text-center text-red-800 font-serif mb-16">
             O que você encontrará aqui
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -259,13 +258,13 @@ export default function HomePage() {
             </Card>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Horários Melhorado */}
-      <section id="horarios" className="py-16 md:py-20 bg-gradient-to-r from-white/80 to-orange-50/80">
+      < section id="horarios" className="py-16 md:py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-4xl lg:text-5xl font-bold text-center bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-center text-red-800 font-serif mb-16">
               Horários de Funcionamento
             </h2>
             <div className="grid md:grid-cols-2 gap-8 mb-12">
@@ -277,9 +276,9 @@ export default function HomePage() {
                   <h3 className="text-2xl font-bold text-gray-800">Endereço</h3>
                 </div>
                 <p className="text-gray-700 text-xl leading-relaxed">
-                  R. Bispo Coutinho, 780 – Carmo
+                  R. Bispo Coutinho, 780 - Carmo
                   <br />
-                  Olinda – PE
+                  Olinda - PE
                 </p>
               </Card>
 
@@ -311,10 +310,10 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Call to Action Melhorado */}
-      <section className="py-16 md:py-20 bg-gradient-to-br from-red-500 via-orange-500 to-yellow-500">
+      < section className="py-6 bg-gradient-to-br from-red-500 via-orange-500 to-yellow-500" >
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-8 drop-shadow-lg">
@@ -333,10 +332,10 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Footer Melhorado */}
-      <footer className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-12 md:py-16">
+      < footer className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-6" >
         <div className="container mx-auto px-4">
           <div className="text-center space-y-6">
             <h3 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
@@ -362,8 +361,8 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </footer>
-      
+      </footer >
+
       <style jsx>{`
         @keyframes fade-in-up {
           from {
@@ -395,6 +394,6 @@ export default function HomePage() {
           animation: fade-in-right 0.8s ease-out 0.2s both;
         }
       `}</style>
-    </div>
+    </div >
   )
 }
